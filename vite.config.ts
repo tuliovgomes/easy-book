@@ -33,6 +33,8 @@ export default defineConfig({
             : [wayfinder({ formVariants: true })]),
     ]),
     server: {
+        origin: 'http://localhost:5173',
+        cors: true,
         watch: {
             ignored: [
                 '**/.agents/**',

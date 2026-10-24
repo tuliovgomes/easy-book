@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use App\Models\Assunto;
 use App\Models\Autor;
 use App\Models\Livro;
+use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Inertia\Testing\AssertableInertia as Assert;
 use Tests\TestCase;
@@ -15,6 +16,7 @@ class LivroControllerTest extends TestCase
 
     public function test_index_exibe_lista_de_livros(): void
     {
+        $this->actingAs(User::factory()->create());
         Livro::factory()->count(3)->create();
 
         $response = $this->get(route('livros.index'));
@@ -30,6 +32,7 @@ class LivroControllerTest extends TestCase
 
     public function test_create_exibe_formulario_com_autores_e_assuntos(): void
     {
+        $this->actingAs(User::factory()->create());
         Autor::factory()->create();
         Assunto::factory()->create();
 
@@ -47,6 +50,7 @@ class LivroControllerTest extends TestCase
 
     public function test_store_cadastra_livro_com_autor_e_assunto(): void
     {
+        $this->actingAs(User::factory()->create());
         $autor = Autor::factory()->create();
         $assunto = Assunto::factory()->create();
 
@@ -90,6 +94,7 @@ class LivroControllerTest extends TestCase
 
     public function test_store_retorna_erros_quando_dados_obrigatorios_nao_sao_informados(): void
     {
+        $this->actingAs(User::factory()->create());
         $response = $this->post(route('livros.store'), []);
 
         $response->assertSessionHasErrors([
@@ -105,6 +110,7 @@ class LivroControllerTest extends TestCase
 
     public function test_show_exibe_detalhes_do_livro(): void
     {
+        $this->actingAs(User::factory()->create());
         $livro = Livro::factory()->create();
 
         $response = $this->get(route('livros.show', $livro->codl));
@@ -120,6 +126,7 @@ class LivroControllerTest extends TestCase
 
     public function test_edit_exibe_formulario_de_edicao(): void
     {
+        $this->actingAs(User::factory()->create());
         $livro = Livro::factory()->create();
 
         $response = $this->get(route('livros.edit', $livro->codl));
@@ -135,6 +142,7 @@ class LivroControllerTest extends TestCase
 
     public function test_update_atualiza_livro_e_seus_relacionamentos(): void
     {
+        $this->actingAs(User::factory()->create());
         $livro = Livro::factory()->create();
 
         $autor = Autor::factory()->create();
@@ -177,6 +185,7 @@ class LivroControllerTest extends TestCase
 
     public function test_destroy_remove_livro(): void
     {
+        $this->actingAs(User::factory()->create());
         $livro = Livro::factory()->create();
 
         $response = $this->delete(

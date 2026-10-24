@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use App\Models\Autor;
 use App\Models\Livro;
+use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Inertia\Testing\AssertableInertia as Assert;
 use Tests\TestCase;
@@ -14,6 +15,7 @@ class AutorControllerTest extends TestCase
 
     public function test_index_exibe_lista_de_autores(): void
     {
+        $this->actingAs(User::factory()->create());
         Autor::factory()->count(3)->create();
 
         $response = $this->get(route('autores.index'));
@@ -29,6 +31,7 @@ class AutorControllerTest extends TestCase
 
     public function test_create_exibe_formulario_de_cadastro(): void
     {
+        $this->actingAs(User::factory()->create());
         $response = $this->get(route('autores.create'));
 
         $response->assertOk();
@@ -41,6 +44,7 @@ class AutorControllerTest extends TestCase
 
     public function test_store_cadastra_autor(): void
     {
+        $this->actingAs(User::factory()->create());
         $response = $this->post(route('autores.store'), [
             'nome' => 'Machado de Assis',
         ]);
@@ -54,6 +58,7 @@ class AutorControllerTest extends TestCase
 
     public function test_store_rejeita_autor_sem_nome(): void
     {
+        $this->actingAs(User::factory()->create());
         $response = $this->post(route('autores.store'), [
             'nome' => '',
         ]);
@@ -65,6 +70,7 @@ class AutorControllerTest extends TestCase
 
     public function test_edit_exibe_autor(): void
     {
+        $this->actingAs(User::factory()->create());
         $autor = Autor::factory()->create();
 
         $response = $this->get(
@@ -82,6 +88,7 @@ class AutorControllerTest extends TestCase
 
     public function test_update_atualiza_autor(): void
     {
+        $this->actingAs(User::factory()->create());
         $autor = Autor::factory()->create([
             'nome' => 'Nome Antigo',
         ]);
@@ -103,6 +110,7 @@ class AutorControllerTest extends TestCase
 
     public function test_destroy_remove_autor_sem_livros_associados(): void
     {
+        $this->actingAs(User::factory()->create());
         $autor = Autor::factory()->create();
 
         $response = $this->delete(
@@ -118,6 +126,7 @@ class AutorControllerTest extends TestCase
 
     public function test_destroy_impede_remocao_de_autor_associado_a_livro(): void
     {
+        $this->actingAs(User::factory()->create());
         $autor = Autor::factory()->create();
         $livro = Livro::factory()->create();
 

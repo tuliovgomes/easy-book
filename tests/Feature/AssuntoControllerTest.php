@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use App\Models\Assunto;
 use App\Models\Livro;
+use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Inertia\Testing\AssertableInertia as Assert;
 use Tests\TestCase;
@@ -14,6 +15,7 @@ class AssuntoControllerTest extends TestCase
 
     public function test_index_exibe_lista_de_assuntos(): void
     {
+        $this->actingAs(User::factory()->create());
         Assunto::factory()->count(3)->create();
 
         $response = $this->get(route('assuntos.index'));
@@ -29,6 +31,7 @@ class AssuntoControllerTest extends TestCase
 
     public function test_create_exibe_formulario_de_cadastro(): void
     {
+        $this->actingAs(User::factory()->create());
         $response = $this->get(route('assuntos.create'));
 
         $response->assertOk();
@@ -41,6 +44,7 @@ class AssuntoControllerTest extends TestCase
 
     public function test_store_cadastra_assunto(): void
     {
+        $this->actingAs(User::factory()->create());
         $response = $this->post(route('assuntos.store'), [
             'descricao' => 'Programação Web',
         ]);
@@ -54,6 +58,7 @@ class AssuntoControllerTest extends TestCase
 
     public function test_store_rejeita_assunto_sem_descricao(): void
     {
+        $this->actingAs(User::factory()->create());
         $response = $this->post(route('assuntos.store'), [
             'descricao' => '',
         ]);
@@ -65,6 +70,7 @@ class AssuntoControllerTest extends TestCase
 
     public function test_edit_exibe_assunto(): void
     {
+        $this->actingAs(User::factory()->create());
         $assunto = Assunto::factory()->create();
 
         $response = $this->get(
@@ -82,6 +88,7 @@ class AssuntoControllerTest extends TestCase
 
     public function test_update_atualiza_assunto(): void
     {
+        $this->actingAs(User::factory()->create());
         $assunto = Assunto::factory()->create([
             'descricao' => 'Descrição Antiga',
         ]);
@@ -103,6 +110,7 @@ class AssuntoControllerTest extends TestCase
 
     public function test_destroy_remove_assunto_sem_livros_associados(): void
     {
+        $this->actingAs(User::factory()->create());
         $assunto = Assunto::factory()->create();
 
         $response = $this->delete(
@@ -118,6 +126,7 @@ class AssuntoControllerTest extends TestCase
 
     public function test_destroy_impede_remocao_de_assunto_associado_a_livro(): void
     {
+        $this->actingAs(User::factory()->create());
         $assunto = Assunto::factory()->create();
         $livro = Livro::factory()->create();
 

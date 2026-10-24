@@ -11,6 +11,9 @@ class Livro extends Model
     /** @use HasFactory<\Database\Factories\LivroFactory> */
     use HasFactory, SoftDeletes;
 
+    protected $table = 'livros';
+    protected $primaryKey = 'codl';
+
     protected $fillable = [
         'titulo',
         'editora',

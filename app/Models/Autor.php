@@ -11,6 +11,9 @@ class Autor extends Model
     /** @use HasFactory<\Database\Factories\AutorFactory> */
     use HasFactory, SoftDeletes;
 
+    protected $table = 'autores';
+    protected $primaryKey = 'codau';
+
     protected $fillable = [
         'nome',
     ];

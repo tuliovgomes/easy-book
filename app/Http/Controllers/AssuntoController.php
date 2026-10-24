@@ -2,63 +2,85 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Assunto;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
+use Inertia\Inertia;
+use Inertia\Response;
 
 class AssuntoController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+    public function index(): Response
     {
-        //
+        $assuntos = Assunto::query()
+            ->withCount('livros')
+            ->orderBy('descricao')
+            ->paginate(10);
+
+        return Inertia::render('Assuntos/Index', [
+            'assuntos' => $assuntos,
+        ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function create(): Response
     {
-        //
+        return Inertia::render('Assuntos/Create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
-        //
+        $dados = $request->validate([
+            'descricao' => ['required', 'string', 'max:20'],
+        ]);
+
+        Assunto::create($dados);
+
+        return to_route('assuntos.index')
+            ->with('success', 'Assunto cadastrado com sucesso.');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function show(Assunto $assunto): Response
     {
-        //
+        $assunto->load([
+            'livros' => fn ($query) => $query->orderBy('titulo'),
+        ]);
+
+        return Inertia::render('Assuntos/Show', [
+            'assunto' => $assunto,
+        ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+    public function edit(Assunto $assunto): Response
     {
-        //
+        return Inertia::render('Assuntos/Edit', [
+            'assunto' => $assunto,
+        ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Assunto $assunto): RedirectResponse
     {
-        //
+        $dados = $request->validate([
+            'descricao' => ['required', 'string', 'max:20'],
+        ]);
+
+        $assunto->update($dados);
+
+        return to_route('assuntos.index')
+            ->with('success', 'Assunto atualizado com sucesso.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
+    public function destroy(Assunto $assunto): RedirectResponse
     {
-        //
+        if ($assunto->livros()->exists()) {
+            throw ValidationException::withMessages([
+                'assunto' => 'Não é possível excluir um assunto associado a livros.',
+            ]);
+        }
+
+        $assunto->delete();
+
+        return to_route('assuntos.index')
+            ->with('success', 'Assunto excluído com sucesso.');
     }
 }

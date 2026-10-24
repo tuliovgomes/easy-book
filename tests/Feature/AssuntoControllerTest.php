@@ -111,7 +111,7 @@ class AssuntoControllerTest extends TestCase
 
         $response->assertRedirect(route('assuntos.index'));
 
-        $this->assertDatabaseMissing('assuntos', [
+        $this->assertSoftDeleted('assuntos', [
             'codas' => $assunto->codas,
         ]);
     }

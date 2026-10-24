@@ -36,8 +36,12 @@ class AssuntoController extends Controller
 
         Assunto::create($dados);
 
-        return to_route('assuntos.index')
-            ->with('success', 'Assunto cadastrado com sucesso.');
+        Inertia::flash('toast', [
+            'type' => 'success',
+            'message' => 'Assunto cadastrado com sucesso.',
+        ]);
+
+        return to_route('assuntos.index');
     }
 
     public function show(Assunto $assunto): Response
@@ -66,8 +70,12 @@ class AssuntoController extends Controller
 
         $assunto->update($dados);
 
-        return to_route('assuntos.index')
-            ->with('success', 'Assunto atualizado com sucesso.');
+        Inertia::flash('toast', [
+            'type' => 'success',
+            'message' => 'Assunto atualizado com sucesso.',
+        ]);
+
+        return to_route('assuntos.index');
     }
 
     public function destroy(Assunto $assunto): RedirectResponse
@@ -80,7 +88,11 @@ class AssuntoController extends Controller
 
         $assunto->delete();
 
-        return to_route('assuntos.index')
-            ->with('success', 'Assunto excluído com sucesso.');
+        Inertia::flash('toast', [
+            'type' => 'success',
+            'message' => 'Assunto excluído com sucesso.',
+        ]);
+
+        return to_route('assuntos.index');
     }
 }

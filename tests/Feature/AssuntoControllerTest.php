@@ -23,7 +23,7 @@ class AssuntoControllerTest extends TestCase
         $response->assertInertia(
             fn (Assert $page) => $page
                 ->component('Assuntos/Index')
-                ->has('assuntos', 3)
+                ->has('assuntos.data', 3)
         );
     }
 

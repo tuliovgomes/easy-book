@@ -219,7 +219,7 @@ store.form = storeForm
 
 /**
 * @see \App\Http\Controllers\AssuntoController::show
-* @see app/Http/Controllers/AssuntoController.php:43
+* @see app/Http/Controllers/AssuntoController.php:47
 * @route '/assuntos/{assunto}'
 */
 export const show = (args: { assunto: number | { codas: number } } | [assunto: number | { codas: number } ] | number | { codas: number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -234,7 +234,7 @@ show.definition = {
 
 /**
 * @see \App\Http\Controllers\AssuntoController::show
-* @see app/Http/Controllers/AssuntoController.php:43
+* @see app/Http/Controllers/AssuntoController.php:47
 * @route '/assuntos/{assunto}'
 */
 show.url = (args: { assunto: number | { codas: number } } | [assunto: number | { codas: number } ] | number | { codas: number }, options?: RouteQueryOptions) => {
@@ -267,7 +267,7 @@ show.url = (args: { assunto: number | { codas: number } } | [assunto: number | {
 
 /**
 * @see \App\Http\Controllers\AssuntoController::show
-* @see app/Http/Controllers/AssuntoController.php:43
+* @see app/Http/Controllers/AssuntoController.php:47
 * @route '/assuntos/{assunto}'
 */
 show.get = (args: { assunto: number | { codas: number } } | [assunto: number | { codas: number } ] | number | { codas: number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -277,7 +277,7 @@ show.get = (args: { assunto: number | { codas: number } } | [assunto: number | {
 
 /**
 * @see \App\Http\Controllers\AssuntoController::show
-* @see app/Http/Controllers/AssuntoController.php:43
+* @see app/Http/Controllers/AssuntoController.php:47
 * @route '/assuntos/{assunto}'
 */
 show.head = (args: { assunto: number | { codas: number } } | [assunto: number | { codas: number } ] | number | { codas: number }, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -287,7 +287,7 @@ show.head = (args: { assunto: number | { codas: number } } | [assunto: number | 
 
 /**
 * @see \App\Http\Controllers\AssuntoController::show
-* @see app/Http/Controllers/AssuntoController.php:43
+* @see app/Http/Controllers/AssuntoController.php:47
 * @route '/assuntos/{assunto}'
 */
 const showForm = (args: { assunto: number | { codas: number } } | [assunto: number | { codas: number } ] | number | { codas: number }, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -297,7 +297,7 @@ const showForm = (args: { assunto: number | { codas: number } } | [assunto: numb
 
 /**
 * @see \App\Http\Controllers\AssuntoController::show
-* @see app/Http/Controllers/AssuntoController.php:43
+* @see app/Http/Controllers/AssuntoController.php:47
 * @route '/assuntos/{assunto}'
 */
 showForm.get = (args: { assunto: number | { codas: number } } | [assunto: number | { codas: number } ] | number | { codas: number }, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -307,7 +307,7 @@ showForm.get = (args: { assunto: number | { codas: number } } | [assunto: number
 
 /**
 * @see \App\Http\Controllers\AssuntoController::show
-* @see app/Http/Controllers/AssuntoController.php:43
+* @see app/Http/Controllers/AssuntoController.php:47
 * @route '/assuntos/{assunto}'
 */
 showForm.head = (args: { assunto: number | { codas: number } } | [assunto: number | { codas: number } ] | number | { codas: number }, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -324,7 +324,7 @@ show.form = showForm
 
 /**
 * @see \App\Http\Controllers\AssuntoController::edit
-* @see app/Http/Controllers/AssuntoController.php:54
+* @see app/Http/Controllers/AssuntoController.php:58
 * @route '/assuntos/{assunto}/edit'
 */
 export const edit = (args: { assunto: number | { codas: number } } | [assunto: number | { codas: number } ] | number | { codas: number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -339,7 +339,7 @@ edit.definition = {
 
 /**
 * @see \App\Http\Controllers\AssuntoController::edit
-* @see app/Http/Controllers/AssuntoController.php:54
+* @see app/Http/Controllers/AssuntoController.php:58
 * @route '/assuntos/{assunto}/edit'
 */
 edit.url = (args: { assunto: number | { codas: number } } | [assunto: number | { codas: number } ] | number | { codas: number }, options?: RouteQueryOptions) => {
@@ -372,7 +372,7 @@ edit.url = (args: { assunto: number | { codas: number } } | [assunto: number | {
 
 /**
 * @see \App\Http\Controllers\AssuntoController::edit
-* @see app/Http/Controllers/AssuntoController.php:54
+* @see app/Http/Controllers/AssuntoController.php:58
 * @route '/assuntos/{assunto}/edit'
 */
 edit.get = (args: { assunto: number | { codas: number } } | [assunto: number | { codas: number } ] | number | { codas: number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -382,7 +382,7 @@ edit.get = (args: { assunto: number | { codas: number } } | [assunto: number | {
 
 /**
 * @see \App\Http\Controllers\AssuntoController::edit
-* @see app/Http/Controllers/AssuntoController.php:54
+* @see app/Http/Controllers/AssuntoController.php:58
 * @route '/assuntos/{assunto}/edit'
 */
 edit.head = (args: { assunto: number | { codas: number } } | [assunto: number | { codas: number } ] | number | { codas: number }, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -392,7 +392,7 @@ edit.head = (args: { assunto: number | { codas: number } } | [assunto: number | 
 
 /**
 * @see \App\Http\Controllers\AssuntoController::edit
-* @see app/Http/Controllers/AssuntoController.php:54
+* @see app/Http/Controllers/AssuntoController.php:58
 * @route '/assuntos/{assunto}/edit'
 */
 const editForm = (args: { assunto: number | { codas: number } } | [assunto: number | { codas: number } ] | number | { codas: number }, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -402,7 +402,7 @@ const editForm = (args: { assunto: number | { codas: number } } | [assunto: numb
 
 /**
 * @see \App\Http\Controllers\AssuntoController::edit
-* @see app/Http/Controllers/AssuntoController.php:54
+* @see app/Http/Controllers/AssuntoController.php:58
 * @route '/assuntos/{assunto}/edit'
 */
 editForm.get = (args: { assunto: number | { codas: number } } | [assunto: number | { codas: number } ] | number | { codas: number }, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -412,7 +412,7 @@ editForm.get = (args: { assunto: number | { codas: number } } | [assunto: number
 
 /**
 * @see \App\Http\Controllers\AssuntoController::edit
-* @see app/Http/Controllers/AssuntoController.php:54
+* @see app/Http/Controllers/AssuntoController.php:58
 * @route '/assuntos/{assunto}/edit'
 */
 editForm.head = (args: { assunto: number | { codas: number } } | [assunto: number | { codas: number } ] | number | { codas: number }, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -429,7 +429,7 @@ edit.form = editForm
 
 /**
 * @see \App\Http\Controllers\AssuntoController::update
-* @see app/Http/Controllers/AssuntoController.php:61
+* @see app/Http/Controllers/AssuntoController.php:65
 * @route '/assuntos/{assunto}'
 */
 export const update = (args: { assunto: number | { codas: number } } | [assunto: number | { codas: number } ] | number | { codas: number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
@@ -444,7 +444,7 @@ update.definition = {
 
 /**
 * @see \App\Http\Controllers\AssuntoController::update
-* @see app/Http/Controllers/AssuntoController.php:61
+* @see app/Http/Controllers/AssuntoController.php:65
 * @route '/assuntos/{assunto}'
 */
 update.url = (args: { assunto: number | { codas: number } } | [assunto: number | { codas: number } ] | number | { codas: number }, options?: RouteQueryOptions) => {
@@ -477,7 +477,7 @@ update.url = (args: { assunto: number | { codas: number } } | [assunto: number |
 
 /**
 * @see \App\Http\Controllers\AssuntoController::update
-* @see app/Http/Controllers/AssuntoController.php:61
+* @see app/Http/Controllers/AssuntoController.php:65
 * @route '/assuntos/{assunto}'
 */
 update.put = (args: { assunto: number | { codas: number } } | [assunto: number | { codas: number } ] | number | { codas: number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
@@ -487,7 +487,7 @@ update.put = (args: { assunto: number | { codas: number } } | [assunto: number |
 
 /**
 * @see \App\Http\Controllers\AssuntoController::update
-* @see app/Http/Controllers/AssuntoController.php:61
+* @see app/Http/Controllers/AssuntoController.php:65
 * @route '/assuntos/{assunto}'
 */
 update.patch = (args: { assunto: number | { codas: number } } | [assunto: number | { codas: number } ] | number | { codas: number }, options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
@@ -497,7 +497,7 @@ update.patch = (args: { assunto: number | { codas: number } } | [assunto: number
 
 /**
 * @see \App\Http\Controllers\AssuntoController::update
-* @see app/Http/Controllers/AssuntoController.php:61
+* @see app/Http/Controllers/AssuntoController.php:65
 * @route '/assuntos/{assunto}'
 */
 const updateForm = (args: { assunto: number | { codas: number } } | [assunto: number | { codas: number } ] | number | { codas: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -512,7 +512,7 @@ const updateForm = (args: { assunto: number | { codas: number } } | [assunto: nu
 
 /**
 * @see \App\Http\Controllers\AssuntoController::update
-* @see app/Http/Controllers/AssuntoController.php:61
+* @see app/Http/Controllers/AssuntoController.php:65
 * @route '/assuntos/{assunto}'
 */
 updateForm.put = (args: { assunto: number | { codas: number } } | [assunto: number | { codas: number } ] | number | { codas: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -527,7 +527,7 @@ updateForm.put = (args: { assunto: number | { codas: number } } | [assunto: numb
 
 /**
 * @see \App\Http\Controllers\AssuntoController::update
-* @see app/Http/Controllers/AssuntoController.php:61
+* @see app/Http/Controllers/AssuntoController.php:65
 * @route '/assuntos/{assunto}'
 */
 updateForm.patch = (args: { assunto: number | { codas: number } } | [assunto: number | { codas: number } ] | number | { codas: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -544,7 +544,7 @@ update.form = updateForm
 
 /**
 * @see \App\Http\Controllers\AssuntoController::destroy
-* @see app/Http/Controllers/AssuntoController.php:73
+* @see app/Http/Controllers/AssuntoController.php:81
 * @route '/assuntos/{assunto}'
 */
 export const destroy = (args: { assunto: number | { codas: number } } | [assunto: number | { codas: number } ] | number | { codas: number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -559,7 +559,7 @@ destroy.definition = {
 
 /**
 * @see \App\Http\Controllers\AssuntoController::destroy
-* @see app/Http/Controllers/AssuntoController.php:73
+* @see app/Http/Controllers/AssuntoController.php:81
 * @route '/assuntos/{assunto}'
 */
 destroy.url = (args: { assunto: number | { codas: number } } | [assunto: number | { codas: number } ] | number | { codas: number }, options?: RouteQueryOptions) => {
@@ -592,7 +592,7 @@ destroy.url = (args: { assunto: number | { codas: number } } | [assunto: number 
 
 /**
 * @see \App\Http\Controllers\AssuntoController::destroy
-* @see app/Http/Controllers/AssuntoController.php:73
+* @see app/Http/Controllers/AssuntoController.php:81
 * @route '/assuntos/{assunto}'
 */
 destroy.delete = (args: { assunto: number | { codas: number } } | [assunto: number | { codas: number } ] | number | { codas: number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -602,7 +602,7 @@ destroy.delete = (args: { assunto: number | { codas: number } } | [assunto: numb
 
 /**
 * @see \App\Http\Controllers\AssuntoController::destroy
-* @see app/Http/Controllers/AssuntoController.php:73
+* @see app/Http/Controllers/AssuntoController.php:81
 * @route '/assuntos/{assunto}'
 */
 const destroyForm = (args: { assunto: number | { codas: number } } | [assunto: number | { codas: number } ] | number | { codas: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -617,7 +617,7 @@ const destroyForm = (args: { assunto: number | { codas: number } } | [assunto: n
 
 /**
 * @see \App\Http\Controllers\AssuntoController::destroy
-* @see app/Http/Controllers/AssuntoController.php:73
+* @see app/Http/Controllers/AssuntoController.php:81
 * @route '/assuntos/{assunto}'
 */
 destroyForm.delete = (args: { assunto: number | { codas: number } } | [assunto: number | { codas: number } ] | number | { codas: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({

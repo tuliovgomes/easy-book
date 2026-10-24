@@ -12,7 +12,6 @@ class Livro extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'cod'
         'titulo',
         'editora',
         'edicao',

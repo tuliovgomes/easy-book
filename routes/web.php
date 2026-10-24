@@ -12,7 +12,7 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Route::resource('livros', LivroController::class);
-Route::resource('autores', AutorController::class);
+Route::resource('autores', AutorController::class)->parameters(['autores' => 'autor']);
 Route::resource('assuntos', AssuntoController::class);
 
 require __DIR__.'/settings.php';

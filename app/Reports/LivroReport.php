@@ -39,6 +39,7 @@ class LivroReport
         return [
             'autores' => $autores,
             'totalAutores' => $autores->count(),
+            'totalLivros' => $registros->pluck('livro_codl')->unique()->count(),
             'totalAssociacoes' => $registros->count(),
         ];
     }

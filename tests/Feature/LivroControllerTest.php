@@ -185,7 +185,7 @@ class LivroControllerTest extends TestCase
 
         $response->assertRedirect(route('livros.index'));
 
-        $this->assertDatabaseMissing('livros', [
+        $this->assertSoftDeleted('livros', [
             'codl' => $livro->codl,
         ]);
     }

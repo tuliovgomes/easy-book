@@ -20,7 +20,6 @@ class LivroFactory extends Factory
     public function definition(): array
     {
         return [
-            'cod' => fake()->unique()->regexify('[A-Z]{3}[0-9]{3}'),
             'titulo' => substr(fake()->sentence(3), 0, 40),
             'editora' => substr(fake()->company(), 0, 40),
             'edicao' => fake()->numberBetween(1, 20),

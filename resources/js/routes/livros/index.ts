@@ -219,7 +219,7 @@ store.form = storeForm
 
 /**
 * @see \App\Http\Controllers\LivroController::show
-* @see app/Http/Controllers/LivroController.php:58
+* @see app/Http/Controllers/LivroController.php:62
 * @route '/livros/{livro}'
 */
 export const show = (args: { livro: number | { codl: number } } | [livro: number | { codl: number } ] | number | { codl: number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -234,7 +234,7 @@ show.definition = {
 
 /**
 * @see \App\Http\Controllers\LivroController::show
-* @see app/Http/Controllers/LivroController.php:58
+* @see app/Http/Controllers/LivroController.php:62
 * @route '/livros/{livro}'
 */
 show.url = (args: { livro: number | { codl: number } } | [livro: number | { codl: number } ] | number | { codl: number }, options?: RouteQueryOptions) => {
@@ -267,7 +267,7 @@ show.url = (args: { livro: number | { codl: number } } | [livro: number | { codl
 
 /**
 * @see \App\Http\Controllers\LivroController::show
-* @see app/Http/Controllers/LivroController.php:58
+* @see app/Http/Controllers/LivroController.php:62
 * @route '/livros/{livro}'
 */
 show.get = (args: { livro: number | { codl: number } } | [livro: number | { codl: number } ] | number | { codl: number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -277,7 +277,7 @@ show.get = (args: { livro: number | { codl: number } } | [livro: number | { codl
 
 /**
 * @see \App\Http\Controllers\LivroController::show
-* @see app/Http/Controllers/LivroController.php:58
+* @see app/Http/Controllers/LivroController.php:62
 * @route '/livros/{livro}'
 */
 show.head = (args: { livro: number | { codl: number } } | [livro: number | { codl: number } ] | number | { codl: number }, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -287,7 +287,7 @@ show.head = (args: { livro: number | { codl: number } } | [livro: number | { cod
 
 /**
 * @see \App\Http\Controllers\LivroController::show
-* @see app/Http/Controllers/LivroController.php:58
+* @see app/Http/Controllers/LivroController.php:62
 * @route '/livros/{livro}'
 */
 const showForm = (args: { livro: number | { codl: number } } | [livro: number | { codl: number } ] | number | { codl: number }, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -297,7 +297,7 @@ const showForm = (args: { livro: number | { codl: number } } | [livro: number | 
 
 /**
 * @see \App\Http\Controllers\LivroController::show
-* @see app/Http/Controllers/LivroController.php:58
+* @see app/Http/Controllers/LivroController.php:62
 * @route '/livros/{livro}'
 */
 showForm.get = (args: { livro: number | { codl: number } } | [livro: number | { codl: number } ] | number | { codl: number }, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -307,7 +307,7 @@ showForm.get = (args: { livro: number | { codl: number } } | [livro: number | { 
 
 /**
 * @see \App\Http\Controllers\LivroController::show
-* @see app/Http/Controllers/LivroController.php:58
+* @see app/Http/Controllers/LivroController.php:62
 * @route '/livros/{livro}'
 */
 showForm.head = (args: { livro: number | { codl: number } } | [livro: number | { codl: number } ] | number | { codl: number }, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -324,7 +324,7 @@ show.form = showForm
 
 /**
 * @see \App\Http\Controllers\LivroController::edit
-* @see app/Http/Controllers/LivroController.php:67
+* @see app/Http/Controllers/LivroController.php:71
 * @route '/livros/{livro}/edit'
 */
 export const edit = (args: { livro: number | { codl: number } } | [livro: number | { codl: number } ] | number | { codl: number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -339,7 +339,7 @@ edit.definition = {
 
 /**
 * @see \App\Http\Controllers\LivroController::edit
-* @see app/Http/Controllers/LivroController.php:67
+* @see app/Http/Controllers/LivroController.php:71
 * @route '/livros/{livro}/edit'
 */
 edit.url = (args: { livro: number | { codl: number } } | [livro: number | { codl: number } ] | number | { codl: number }, options?: RouteQueryOptions) => {
@@ -372,7 +372,7 @@ edit.url = (args: { livro: number | { codl: number } } | [livro: number | { codl
 
 /**
 * @see \App\Http\Controllers\LivroController::edit
-* @see app/Http/Controllers/LivroController.php:67
+* @see app/Http/Controllers/LivroController.php:71
 * @route '/livros/{livro}/edit'
 */
 edit.get = (args: { livro: number | { codl: number } } | [livro: number | { codl: number } ] | number | { codl: number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -382,7 +382,7 @@ edit.get = (args: { livro: number | { codl: number } } | [livro: number | { codl
 
 /**
 * @see \App\Http\Controllers\LivroController::edit
-* @see app/Http/Controllers/LivroController.php:67
+* @see app/Http/Controllers/LivroController.php:71
 * @route '/livros/{livro}/edit'
 */
 edit.head = (args: { livro: number | { codl: number } } | [livro: number | { codl: number } ] | number | { codl: number }, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -392,7 +392,7 @@ edit.head = (args: { livro: number | { codl: number } } | [livro: number | { cod
 
 /**
 * @see \App\Http\Controllers\LivroController::edit
-* @see app/Http/Controllers/LivroController.php:67
+* @see app/Http/Controllers/LivroController.php:71
 * @route '/livros/{livro}/edit'
 */
 const editForm = (args: { livro: number | { codl: number } } | [livro: number | { codl: number } ] | number | { codl: number }, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -402,7 +402,7 @@ const editForm = (args: { livro: number | { codl: number } } | [livro: number | 
 
 /**
 * @see \App\Http\Controllers\LivroController::edit
-* @see app/Http/Controllers/LivroController.php:67
+* @see app/Http/Controllers/LivroController.php:71
 * @route '/livros/{livro}/edit'
 */
 editForm.get = (args: { livro: number | { codl: number } } | [livro: number | { codl: number } ] | number | { codl: number }, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -412,7 +412,7 @@ editForm.get = (args: { livro: number | { codl: number } } | [livro: number | { 
 
 /**
 * @see \App\Http\Controllers\LivroController::edit
-* @see app/Http/Controllers/LivroController.php:67
+* @see app/Http/Controllers/LivroController.php:71
 * @route '/livros/{livro}/edit'
 */
 editForm.head = (args: { livro: number | { codl: number } } | [livro: number | { codl: number } ] | number | { codl: number }, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -429,7 +429,7 @@ edit.form = editForm
 
 /**
 * @see \App\Http\Controllers\LivroController::update
-* @see app/Http/Controllers/LivroController.php:80
+* @see app/Http/Controllers/LivroController.php:84
 * @route '/livros/{livro}'
 */
 export const update = (args: { livro: number | { codl: number } } | [livro: number | { codl: number } ] | number | { codl: number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
@@ -444,7 +444,7 @@ update.definition = {
 
 /**
 * @see \App\Http\Controllers\LivroController::update
-* @see app/Http/Controllers/LivroController.php:80
+* @see app/Http/Controllers/LivroController.php:84
 * @route '/livros/{livro}'
 */
 update.url = (args: { livro: number | { codl: number } } | [livro: number | { codl: number } ] | number | { codl: number }, options?: RouteQueryOptions) => {
@@ -477,7 +477,7 @@ update.url = (args: { livro: number | { codl: number } } | [livro: number | { co
 
 /**
 * @see \App\Http\Controllers\LivroController::update
-* @see app/Http/Controllers/LivroController.php:80
+* @see app/Http/Controllers/LivroController.php:84
 * @route '/livros/{livro}'
 */
 update.put = (args: { livro: number | { codl: number } } | [livro: number | { codl: number } ] | number | { codl: number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
@@ -487,7 +487,7 @@ update.put = (args: { livro: number | { codl: number } } | [livro: number | { co
 
 /**
 * @see \App\Http\Controllers\LivroController::update
-* @see app/Http/Controllers/LivroController.php:80
+* @see app/Http/Controllers/LivroController.php:84
 * @route '/livros/{livro}'
 */
 update.patch = (args: { livro: number | { codl: number } } | [livro: number | { codl: number } ] | number | { codl: number }, options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
@@ -497,7 +497,7 @@ update.patch = (args: { livro: number | { codl: number } } | [livro: number | { 
 
 /**
 * @see \App\Http\Controllers\LivroController::update
-* @see app/Http/Controllers/LivroController.php:80
+* @see app/Http/Controllers/LivroController.php:84
 * @route '/livros/{livro}'
 */
 const updateForm = (args: { livro: number | { codl: number } } | [livro: number | { codl: number } ] | number | { codl: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -512,7 +512,7 @@ const updateForm = (args: { livro: number | { codl: number } } | [livro: number 
 
 /**
 * @see \App\Http\Controllers\LivroController::update
-* @see app/Http/Controllers/LivroController.php:80
+* @see app/Http/Controllers/LivroController.php:84
 * @route '/livros/{livro}'
 */
 updateForm.put = (args: { livro: number | { codl: number } } | [livro: number | { codl: number } ] | number | { codl: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -527,7 +527,7 @@ updateForm.put = (args: { livro: number | { codl: number } } | [livro: number | 
 
 /**
 * @see \App\Http\Controllers\LivroController::update
-* @see app/Http/Controllers/LivroController.php:80
+* @see app/Http/Controllers/LivroController.php:84
 * @route '/livros/{livro}'
 */
 updateForm.patch = (args: { livro: number | { codl: number } } | [livro: number | { codl: number } ] | number | { codl: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -544,7 +544,7 @@ update.form = updateForm
 
 /**
 * @see \App\Http\Controllers\LivroController::destroy
-* @see app/Http/Controllers/LivroController.php:101
+* @see app/Http/Controllers/LivroController.php:109
 * @route '/livros/{livro}'
 */
 export const destroy = (args: { livro: number | { codl: number } } | [livro: number | { codl: number } ] | number | { codl: number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -559,7 +559,7 @@ destroy.definition = {
 
 /**
 * @see \App\Http\Controllers\LivroController::destroy
-* @see app/Http/Controllers/LivroController.php:101
+* @see app/Http/Controllers/LivroController.php:109
 * @route '/livros/{livro}'
 */
 destroy.url = (args: { livro: number | { codl: number } } | [livro: number | { codl: number } ] | number | { codl: number }, options?: RouteQueryOptions) => {
@@ -592,7 +592,7 @@ destroy.url = (args: { livro: number | { codl: number } } | [livro: number | { c
 
 /**
 * @see \App\Http\Controllers\LivroController::destroy
-* @see app/Http/Controllers/LivroController.php:101
+* @see app/Http/Controllers/LivroController.php:109
 * @route '/livros/{livro}'
 */
 destroy.delete = (args: { livro: number | { codl: number } } | [livro: number | { codl: number } ] | number | { codl: number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -602,7 +602,7 @@ destroy.delete = (args: { livro: number | { codl: number } } | [livro: number | 
 
 /**
 * @see \App\Http\Controllers\LivroController::destroy
-* @see app/Http/Controllers/LivroController.php:101
+* @see app/Http/Controllers/LivroController.php:109
 * @route '/livros/{livro}'
 */
 const destroyForm = (args: { livro: number | { codl: number } } | [livro: number | { codl: number } ] | number | { codl: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -617,7 +617,7 @@ const destroyForm = (args: { livro: number | { codl: number } } | [livro: number
 
 /**
 * @see \App\Http\Controllers\LivroController::destroy
-* @see app/Http/Controllers/LivroController.php:101
+* @see app/Http/Controllers/LivroController.php:109
 * @route '/livros/{livro}'
 */
 destroyForm.delete = (args: { livro: number | { codl: number } } | [livro: number | { codl: number } ] | number | { codl: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({

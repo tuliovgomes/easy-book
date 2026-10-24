@@ -36,8 +36,12 @@ class AutorController extends Controller
 
         Autor::create($dados);
 
-        return to_route('autores.index')
-            ->with('success', 'Autor cadastrado com sucesso.');
+        Inertia::flash('toast', [
+            'type' => 'success',
+            'message' => 'Autor cadastrado com sucesso.',
+        ]);
+
+        return to_route('autores.index');
     }
 
     public function show(Autor $autor): Response
@@ -66,8 +70,12 @@ class AutorController extends Controller
 
         $autor->update($dados);
 
-        return to_route('autores.index')
-            ->with('success', 'Autor atualizado com sucesso.');
+        Inertia::flash('toast', [
+            'type' => 'success',
+            'message' => 'Autor atualizado com sucesso.',
+        ]);
+
+        return to_route('autores.index');
     }
 
     public function destroy(Autor $autor): RedirectResponse
@@ -80,7 +88,11 @@ class AutorController extends Controller
 
         $autor->delete();
 
-        return to_route('autores.index')
-            ->with('success', 'Autor excluído com sucesso.');
+        Inertia::flash('toast', [
+            'type' => 'success',
+            'message' => 'Autor excluído com sucesso.',
+        ]);
+
+        return to_route('autores.index');
     }
 }

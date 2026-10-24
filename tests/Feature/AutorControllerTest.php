@@ -23,7 +23,7 @@ class AutorControllerTest extends TestCase
         $response->assertInertia(
             fn (Assert $page) => $page
                 ->component('Autores/Index')
-                ->has('autores', 3)
+                ->has('autores.data', 3)
         );
     }
 

@@ -4,4 +4,5 @@
 * criado teste para cada controller
 * criado com base no test o código do controller (so backend por enquanto), 
 * criado seeder
-*criado a parte do front criação, visualização, edição e listagem dos livros. rodei os testes e todos passaram
+* criado a parte do front criação, visualização, edição e listagem dos livros. rodei os testes e todos passaram (docker compose exec app php artisan test --filter=LivroControllerTest)
+* criado o front do autor, com listagem edição, visualização e deleção. rodei todos os testes um falhou, foi corrigido o teste e todos passaram (docker compose exec app php artisan test --filter=AutorControllerTest)

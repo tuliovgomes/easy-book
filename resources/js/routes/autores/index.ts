@@ -219,7 +219,7 @@ store.form = storeForm
 
 /**
 * @see \App\Http\Controllers\AutorController::show
-* @see app/Http/Controllers/AutorController.php:43
+* @see app/Http/Controllers/AutorController.php:47
 * @route '/autores/{autor}'
 */
 export const show = (args: { autor: number | { codau: number } } | [autor: number | { codau: number } ] | number | { codau: number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -234,7 +234,7 @@ show.definition = {
 
 /**
 * @see \App\Http\Controllers\AutorController::show
-* @see app/Http/Controllers/AutorController.php:43
+* @see app/Http/Controllers/AutorController.php:47
 * @route '/autores/{autor}'
 */
 show.url = (args: { autor: number | { codau: number } } | [autor: number | { codau: number } ] | number | { codau: number }, options?: RouteQueryOptions) => {
@@ -267,7 +267,7 @@ show.url = (args: { autor: number | { codau: number } } | [autor: number | { cod
 
 /**
 * @see \App\Http\Controllers\AutorController::show
-* @see app/Http/Controllers/AutorController.php:43
+* @see app/Http/Controllers/AutorController.php:47
 * @route '/autores/{autor}'
 */
 show.get = (args: { autor: number | { codau: number } } | [autor: number | { codau: number } ] | number | { codau: number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -277,7 +277,7 @@ show.get = (args: { autor: number | { codau: number } } | [autor: number | { cod
 
 /**
 * @see \App\Http\Controllers\AutorController::show
-* @see app/Http/Controllers/AutorController.php:43
+* @see app/Http/Controllers/AutorController.php:47
 * @route '/autores/{autor}'
 */
 show.head = (args: { autor: number | { codau: number } } | [autor: number | { codau: number } ] | number | { codau: number }, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -287,7 +287,7 @@ show.head = (args: { autor: number | { codau: number } } | [autor: number | { co
 
 /**
 * @see \App\Http\Controllers\AutorController::show
-* @see app/Http/Controllers/AutorController.php:43
+* @see app/Http/Controllers/AutorController.php:47
 * @route '/autores/{autor}'
 */
 const showForm = (args: { autor: number | { codau: number } } | [autor: number | { codau: number } ] | number | { codau: number }, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -297,7 +297,7 @@ const showForm = (args: { autor: number | { codau: number } } | [autor: number |
 
 /**
 * @see \App\Http\Controllers\AutorController::show
-* @see app/Http/Controllers/AutorController.php:43
+* @see app/Http/Controllers/AutorController.php:47
 * @route '/autores/{autor}'
 */
 showForm.get = (args: { autor: number | { codau: number } } | [autor: number | { codau: number } ] | number | { codau: number }, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -307,7 +307,7 @@ showForm.get = (args: { autor: number | { codau: number } } | [autor: number | {
 
 /**
 * @see \App\Http\Controllers\AutorController::show
-* @see app/Http/Controllers/AutorController.php:43
+* @see app/Http/Controllers/AutorController.php:47
 * @route '/autores/{autor}'
 */
 showForm.head = (args: { autor: number | { codau: number } } | [autor: number | { codau: number } ] | number | { codau: number }, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -324,7 +324,7 @@ show.form = showForm
 
 /**
 * @see \App\Http\Controllers\AutorController::edit
-* @see app/Http/Controllers/AutorController.php:54
+* @see app/Http/Controllers/AutorController.php:58
 * @route '/autores/{autor}/edit'
 */
 export const edit = (args: { autor: number | { codau: number } } | [autor: number | { codau: number } ] | number | { codau: number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -339,7 +339,7 @@ edit.definition = {
 
 /**
 * @see \App\Http\Controllers\AutorController::edit
-* @see app/Http/Controllers/AutorController.php:54
+* @see app/Http/Controllers/AutorController.php:58
 * @route '/autores/{autor}/edit'
 */
 edit.url = (args: { autor: number | { codau: number } } | [autor: number | { codau: number } ] | number | { codau: number }, options?: RouteQueryOptions) => {
@@ -372,7 +372,7 @@ edit.url = (args: { autor: number | { codau: number } } | [autor: number | { cod
 
 /**
 * @see \App\Http\Controllers\AutorController::edit
-* @see app/Http/Controllers/AutorController.php:54
+* @see app/Http/Controllers/AutorController.php:58
 * @route '/autores/{autor}/edit'
 */
 edit.get = (args: { autor: number | { codau: number } } | [autor: number | { codau: number } ] | number | { codau: number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -382,7 +382,7 @@ edit.get = (args: { autor: number | { codau: number } } | [autor: number | { cod
 
 /**
 * @see \App\Http\Controllers\AutorController::edit
-* @see app/Http/Controllers/AutorController.php:54
+* @see app/Http/Controllers/AutorController.php:58
 * @route '/autores/{autor}/edit'
 */
 edit.head = (args: { autor: number | { codau: number } } | [autor: number | { codau: number } ] | number | { codau: number }, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -392,7 +392,7 @@ edit.head = (args: { autor: number | { codau: number } } | [autor: number | { co
 
 /**
 * @see \App\Http\Controllers\AutorController::edit
-* @see app/Http/Controllers/AutorController.php:54
+* @see app/Http/Controllers/AutorController.php:58
 * @route '/autores/{autor}/edit'
 */
 const editForm = (args: { autor: number | { codau: number } } | [autor: number | { codau: number } ] | number | { codau: number }, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -402,7 +402,7 @@ const editForm = (args: { autor: number | { codau: number } } | [autor: number |
 
 /**
 * @see \App\Http\Controllers\AutorController::edit
-* @see app/Http/Controllers/AutorController.php:54
+* @see app/Http/Controllers/AutorController.php:58
 * @route '/autores/{autor}/edit'
 */
 editForm.get = (args: { autor: number | { codau: number } } | [autor: number | { codau: number } ] | number | { codau: number }, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -412,7 +412,7 @@ editForm.get = (args: { autor: number | { codau: number } } | [autor: number | {
 
 /**
 * @see \App\Http\Controllers\AutorController::edit
-* @see app/Http/Controllers/AutorController.php:54
+* @see app/Http/Controllers/AutorController.php:58
 * @route '/autores/{autor}/edit'
 */
 editForm.head = (args: { autor: number | { codau: number } } | [autor: number | { codau: number } ] | number | { codau: number }, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -429,7 +429,7 @@ edit.form = editForm
 
 /**
 * @see \App\Http\Controllers\AutorController::update
-* @see app/Http/Controllers/AutorController.php:61
+* @see app/Http/Controllers/AutorController.php:65
 * @route '/autores/{autor}'
 */
 export const update = (args: { autor: number | { codau: number } } | [autor: number | { codau: number } ] | number | { codau: number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
@@ -444,7 +444,7 @@ update.definition = {
 
 /**
 * @see \App\Http\Controllers\AutorController::update
-* @see app/Http/Controllers/AutorController.php:61
+* @see app/Http/Controllers/AutorController.php:65
 * @route '/autores/{autor}'
 */
 update.url = (args: { autor: number | { codau: number } } | [autor: number | { codau: number } ] | number | { codau: number }, options?: RouteQueryOptions) => {
@@ -477,7 +477,7 @@ update.url = (args: { autor: number | { codau: number } } | [autor: number | { c
 
 /**
 * @see \App\Http\Controllers\AutorController::update
-* @see app/Http/Controllers/AutorController.php:61
+* @see app/Http/Controllers/AutorController.php:65
 * @route '/autores/{autor}'
 */
 update.put = (args: { autor: number | { codau: number } } | [autor: number | { codau: number } ] | number | { codau: number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
@@ -487,7 +487,7 @@ update.put = (args: { autor: number | { codau: number } } | [autor: number | { c
 
 /**
 * @see \App\Http\Controllers\AutorController::update
-* @see app/Http/Controllers/AutorController.php:61
+* @see app/Http/Controllers/AutorController.php:65
 * @route '/autores/{autor}'
 */
 update.patch = (args: { autor: number | { codau: number } } | [autor: number | { codau: number } ] | number | { codau: number }, options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
@@ -497,7 +497,7 @@ update.patch = (args: { autor: number | { codau: number } } | [autor: number | {
 
 /**
 * @see \App\Http\Controllers\AutorController::update
-* @see app/Http/Controllers/AutorController.php:61
+* @see app/Http/Controllers/AutorController.php:65
 * @route '/autores/{autor}'
 */
 const updateForm = (args: { autor: number | { codau: number } } | [autor: number | { codau: number } ] | number | { codau: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -512,7 +512,7 @@ const updateForm = (args: { autor: number | { codau: number } } | [autor: number
 
 /**
 * @see \App\Http\Controllers\AutorController::update
-* @see app/Http/Controllers/AutorController.php:61
+* @see app/Http/Controllers/AutorController.php:65
 * @route '/autores/{autor}'
 */
 updateForm.put = (args: { autor: number | { codau: number } } | [autor: number | { codau: number } ] | number | { codau: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -527,7 +527,7 @@ updateForm.put = (args: { autor: number | { codau: number } } | [autor: number |
 
 /**
 * @see \App\Http\Controllers\AutorController::update
-* @see app/Http/Controllers/AutorController.php:61
+* @see app/Http/Controllers/AutorController.php:65
 * @route '/autores/{autor}'
 */
 updateForm.patch = (args: { autor: number | { codau: number } } | [autor: number | { codau: number } ] | number | { codau: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -544,7 +544,7 @@ update.form = updateForm
 
 /**
 * @see \App\Http\Controllers\AutorController::destroy
-* @see app/Http/Controllers/AutorController.php:73
+* @see app/Http/Controllers/AutorController.php:81
 * @route '/autores/{autor}'
 */
 export const destroy = (args: { autor: number | { codau: number } } | [autor: number | { codau: number } ] | number | { codau: number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -559,7 +559,7 @@ destroy.definition = {
 
 /**
 * @see \App\Http\Controllers\AutorController::destroy
-* @see app/Http/Controllers/AutorController.php:73
+* @see app/Http/Controllers/AutorController.php:81
 * @route '/autores/{autor}'
 */
 destroy.url = (args: { autor: number | { codau: number } } | [autor: number | { codau: number } ] | number | { codau: number }, options?: RouteQueryOptions) => {
@@ -592,7 +592,7 @@ destroy.url = (args: { autor: number | { codau: number } } | [autor: number | { 
 
 /**
 * @see \App\Http\Controllers\AutorController::destroy
-* @see app/Http/Controllers/AutorController.php:73
+* @see app/Http/Controllers/AutorController.php:81
 * @route '/autores/{autor}'
 */
 destroy.delete = (args: { autor: number | { codau: number } } | [autor: number | { codau: number } ] | number | { codau: number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -602,7 +602,7 @@ destroy.delete = (args: { autor: number | { codau: number } } | [autor: number |
 
 /**
 * @see \App\Http\Controllers\AutorController::destroy
-* @see app/Http/Controllers/AutorController.php:73
+* @see app/Http/Controllers/AutorController.php:81
 * @route '/autores/{autor}'
 */
 const destroyForm = (args: { autor: number | { codau: number } } | [autor: number | { codau: number } ] | number | { codau: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -617,7 +617,7 @@ const destroyForm = (args: { autor: number | { codau: number } } | [autor: numbe
 
 /**
 * @see \App\Http\Controllers\AutorController::destroy
-* @see app/Http/Controllers/AutorController.php:73
+* @see app/Http/Controllers/AutorController.php:81
 * @route '/autores/{autor}'
 */
 destroyForm.delete = (args: { autor: number | { codau: number } } | [autor: number | { codau: number } ] | number | { codau: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({

@@ -51,8 +51,12 @@ class LivroController extends Controller
             $livro->assuntos()->sync($dados['assuntos']);
         });
 
-        return to_route('livros.index')
-            ->with('success', 'Livro cadastrado com sucesso.');
+        Inertia::flash('toast', [
+            'type' => 'success',
+            'message' => 'Livro cadastrado com sucesso.',
+        ]);
+
+        return to_route('livros.index');
     }
 
     public function show(Livro $livro): Response
@@ -94,16 +98,24 @@ class LivroController extends Controller
             $livro->assuntos()->sync($dados['assuntos']);
         });
 
-        return to_route('livros.index')
-            ->with('success', 'Livro atualizado com sucesso.');
+        Inertia::flash('toast', [
+            'type' => 'success',
+            'message' => 'Livro atualizado com sucesso.',
+        ]);
+
+        return to_route('livros.index');
     }
 
     public function destroy(Livro $livro): RedirectResponse
     {
         $livro->delete();
 
-        return to_route('livros.index')
-            ->with('success', 'Livro excluído com sucesso.');
+        Inertia::flash('toast', [
+            'type' => 'success',
+            'message' => 'Livro excluído com sucesso.',
+        ]);
+
+        return to_route('livros.index');
     }
 
     private function rules(): array

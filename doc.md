@@ -4,3 +4,4 @@
 * criado teste para cada controller
 * criado com base no test o código do controller (so backend por enquanto), 
 * criado seeder
+*criado a parte do front criação, visualização, edição e listagem dos livros. rodei os testes e todos passaram

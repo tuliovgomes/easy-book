@@ -38,7 +38,8 @@ class Livro extends Model
             Assunto::class,
             'livro_assunto',
             'livro_codl',
-            'assunto_codas'
+            'assunto_codas',
+            'valor'
         );
     }
 }

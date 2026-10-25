@@ -46,7 +46,9 @@ services:
     container_name: laravel_node
     restart: unless-stopped
     working_dir: /var/www/html
-    user: "1000:1000"
+    # Inicia como root só para dar ao usuário node (UID 1000) a posse do volume
+    # node_modules, que o Docker cria como root; o npm roda como node.
+    user: root
     environment:
       SKIP_WAYFINDER: "1"
       npm_config_cache: /tmp/.npm
@@ -55,7 +57,7 @@ services:
     volumes:
       - .:/var/www/html
       - node_modules:/var/www/html/node_modules
-    command: sh -c "npm install && npm run dev -- --host 0.0.0.0"
+    command: sh -c "chown node:node /var/www/html/node_modules && su node -s /bin/sh -c 'npm install && npm run dev -- --host 0.0.0.0'"
     networks:
       - laravel_network
 
